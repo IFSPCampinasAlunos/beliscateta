@@ -1,0 +1,96 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-BR"> <![endif]-->
+<html class="no-js" lang="pt-BR" ng-app="churras-belisca-teta">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Churras Beslica-&Theta;&trade;</title>
+
+    <link rel="stylesheet" href="/foundation/css/normalize.css" />
+    <link rel="stylesheet" href="/foundation/css/foundation.css" />
+    <link rel="stylesheet" href="/octicons/octicons.css" />
+
+    <!-- build:css app.css -->
+    <link rel="stylesheet" href="/main/main-controller.css" />
+    <link rel="stylesheet" href="/app.css" />
+    <!-- endbuild -->
+
+    <script src="/foundation/js/vendor/modernizr.js"></script>
+  </head>
+  <body ng-controller="MainController as main">
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Churras Belisca-&Theta;&trade;</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>Quando?</h2>
+      </div>
+
+      <div class="large-12 columns">
+        {{main.when | localize}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>Quanto?</h2>
+      </div>
+
+      <div class="large-12 columns">
+        {{main.howMuch}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>Onde?</h2>
+      </div>
+
+      <div class="large-6 columns">
+        <address>
+          <ul>
+            <li>{{main.where.place}}</li>
+            <li>{{main.where.address}}</li>
+          </ul>
+        </address>
+      </div>
+      <div class="large-6 columns">
+        <bt-maps mode="'place'" location="main.where.address | escape" class="panel"></bt-maps>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <footer class="clearfix">
+          <span class="left qrcode"></span>
+          <a href="https://github.com/IFSPCampinasAlunos/beliscateta"
+            title="Código-fonte" class="right">
+            <span class="octicon octicon-mark-github"></span>
+            IFSPCampinasAlunos/beliscateta
+          </a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- load libs -->
+    <script src="/foundation/js/vendor/jquery.js"></script>
+    <script src="/foundation/js/foundation.min.js"></script>
+    <script src="/components/angular/angular.js"></script>
+    <script src="/components/angular-foundation/mm-foundation-tpls.js"></script>
+
+    <!-- build:js app.js -->
+    <script src="/modules/localize-filter/localize-filter.js"></script>
+    <script src="/modules/escape-filter/escape-filter.js"></script>
+    <script src="/modules/maps/maps.js"></script>
+    <script src="/modules/maps/maps-directive.js"></script>
+
+    <script src="/app.js"></script>
+    <script src="/main/main-controller.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

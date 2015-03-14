@@ -1,0 +1,25 @@
+{
+  "name": "beliscateta",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/IFSPCampinasAlunos/beliscateta",
+  "authors": [
+    "Daniel Teixeira <daniel.t.dt@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-foundation": "~0.5.1"
+  }
+}
